@@ -52,11 +52,11 @@ def gain (data_x, gain_parameters):
   ## GAIN architecture   
   # Input placeholders
   # Data vector
-  X = tf.compat.v1.placeholder(tf.float32, shape = [None, dim])
+  X = tf.placeholder(tf.float32, shape = [None, dim])
   # Mask vector 
-  M = tf.compat.v1.placeholder(tf.float32, shape = [None, dim])
+  M = tf.placeholder(tf.float32, shape = [None, dim])
   # Hint vector
-  H = tf.compat.v1.placeholder(tf.float32, shape = [None, dim])
+  H = tf.placeholder(tf.float32, shape = [None, dim])
   
   # Discriminator variables
   D_W1 = tf.Variable(xavier_init([dim*2, h_dim])) # Data + Hint as inputs
